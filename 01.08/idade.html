@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" placeholder="anoNascimento"  id="anoNascimento">
+
+    
+
+   
+
+    <input type="submit"  onclick="idade(); return false" >
+
+    <script>
+        function idade(){
+            let anoNascimento =document.getElementById('anoNascimento').value;
+            let anoAtual = new Date().getFullYear();
+            let idade = anoAtual - anoNascimento;
+            alert("Sua idade é: " + idade);
+           
+        }
+        function gotohome(){
+                location.href="3botoes.html"
+            }
+    </script>
+      <button type="button" onclick="gotohome()">Voltar</button>
+</body>
+</html>

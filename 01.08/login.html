@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+
+<body>
+    <form>
+        <h3>login</h3>
+
+        <input type="text" placeholder="Login"  id="login">
+
+        <h3>Senha</h3>
+        
+        <input type="password" placeholder="Senha" id="senha">
+
+        <h3></h3>
+
+        <input type="submit"  onclick="logar(); return false" >
+
+    </form>
+
+    <script>
+        function logar(){
+            var login = document.getElementById('login').value;
+            var senha = document.getElementById('senha').value;
+
+            if(login == 'Reneto' && senha == 'poggers'){
+                window.alert('Login efetuado com sucesso!');
+                location.href="https://suap.ifmt.edu.br/edu/aluno/202410230320033/?tab=boletim"
+            } else{
+                window.alert('Login ou senha inválidos!');
+            }
+        }
+        
+    </script>
+</body>
+</html>

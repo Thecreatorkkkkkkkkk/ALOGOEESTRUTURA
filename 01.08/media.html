@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="number" placeholder="num1"  id="num1">
+
+        <input type="number" placeholder="num2" id="num2">
+
+        
+        <input type="submit"  onclick="media(); return false" >
+    </form>
+
+    <script>
+        function media(){
+            let num1 = document.getElementById('num1').value;
+            let num2 = document.getElementById('num2').value;
+            let media = (num1 + num2) / 2;
+            alert("A média dos números é: " + media);
+        
+        }
+        function gotohome(){
+            location.href="3botoes.html"
+        }
+    </script>
+    <button type="button" onclick="gotohome()">Voltar</button>
+</body>
+</html>
