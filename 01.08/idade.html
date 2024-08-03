@@ -6,14 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="number" placeholder="anoNascimento"  id="anoNascimento">
+    <form>
+        <input type="number" placeholder="anoNascimento"  id="anoNascimento">
 
     
 
    
 
-    <input type="submit"  onclick="idade(); return false" >
-
+        <input type="submit"  onclick="idade(); return false" >
+    </form>
     <script>
         function idade(){
             let anoNascimento =document.getElementById('anoNascimento').value;

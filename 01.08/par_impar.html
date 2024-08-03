@@ -13,7 +13,7 @@
         <input type="submit"  onclick="parimpar(); return false" >
     <script>
         function parimpar(){
-            let num = parseInt(prompt("Digite um número: "));
+            let num = parseInt(document.getElementById('num').value);
                 if(num % 2 == 0){
                     alert("O número é par");
                 } else {
