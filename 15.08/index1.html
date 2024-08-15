@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="alunoForm">
+        <label for="name">Nome do aluno:</label>
+        <input type="text" id="nome" name="nome">
+
+        <label for="faltas">Número de faltas:</label>
+        <input type="number" id="faltas" name="faltas">
+
+        <label for="media">Média:</label>
+        <input type="number" step="0.01" id="media" name="media">
+
+        <button type="button"  onclick="lerDadosaluno()">Adicionar aluno</button>
+    </form>
+    <div id="listagemAlunos"></div>
+
+    <script>
+        let alunos = [];
+
+        function lerDadosaluno(){
+            let nome = document.getElementById('nome').value;
+            let faltas = parseInt(document.getElementById('faltas').value);
+            let media = parseFloat(document.getElementById('media').value);
+
+            let aluno = {
+                nome: nome,
+                faltas: faltas,
+                media: media
+            };
+            alunos.push(aluno);
+
+            document.getElementById('alunoForm').reset();
+
+            exibirAlunos();
+        }
+
+        function exibirAlunos(){
+            let listagem = document.getElementById('listagemAlunos');
+            listagem.innerHTML = "<h2>listagem dos alunos:</h2>";
+            for(let aluno of alunos){
+                listagem.innerHTML += `<p>Nome: ${aluno.nome}, Faltas: ${aluno.faltas}, Média: ${aluno.media}</p>`;
+
+            }
+        }
+    </script>
+    
+</body>
+</html>
